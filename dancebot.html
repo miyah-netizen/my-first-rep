@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dancing Silhouette</title>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .silhouette {
+      width: 100px;
+      height: 200px;
+      background: linear-gradient(to bottom, #444, #000);
+      border-radius: 50px;
+      animation: dance 1s infinite ease-in-out;
+    }
+
+    @keyframes dance {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      50% { transform: rotate(-10deg); }
+      75% { transform: rotate(5deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="silhouette"></div>
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/05/30/audio_4ef4ad6c28.mp3?filename=lofi-beat-14479.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
